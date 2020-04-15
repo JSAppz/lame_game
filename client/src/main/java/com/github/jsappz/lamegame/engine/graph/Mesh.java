@@ -57,7 +57,12 @@ public class Mesh {
             vboId = glGenBuffers();
             vboIdList.add(vboId);
             vecNormalsBuffer = MemoryUtil.memAllocFloat(normals.length);
-            vecNormalsBuffer.put(normals).flip();
+            if (vecNormalsBuffer.capacity() > 0) {
+                vecNormalsBuffer.put(normals).flip();
+            } else {
+                // Create empty structure
+                vecNormalsBuffer = MemoryUtil.memAllocFloat(positions.length);
+            }
             glBindBuffer(GL_ARRAY_BUFFER, vboId);
             glBufferData(GL_ARRAY_BUFFER, vecNormalsBuffer, GL_STATIC_DRAW);
             glEnableVertexAttribArray(2);
@@ -112,6 +117,14 @@ public class Mesh {
             glActiveTexture(GL_TEXTURE0);
             // Bind the texture
             glBindTexture(GL_TEXTURE_2D, texture.getId());
+        }
+
+        Texture normalMap = material.getNormalMap();
+        if (normalMap != null) {
+            // Activate first texture bank
+            glActiveTexture(GL_TEXTURE1);
+            // Bind the texture
+            glBindTexture(GL_TEXTURE_2D, normalMap.getId());
         }
 
         // Draw the mesh
