@@ -24,7 +24,7 @@ dependencies {
     compile libraries.logback
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
     compile 'io.springfox:springfox-swagger2:2.9.2'
-    compile 'io.springfox:springfox-swagger-ui:2.9.2'
+    compile 'io.springfox:springfox-swagger-ui:2.10.0'
 
     testCompile libraries.hamcrest
     testCompile libraries.junit
