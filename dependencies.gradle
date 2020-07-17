@@ -15,7 +15,7 @@ versions.logback = '1.2.3'
 versions.lwjgl = '3.2.3'
 versions.lwjgl_natives = 'natives-windows'
 versions.mysql = '8.0.19'
-versions.mockito = '3.3.3'
+versions.mockito = '3.4.2'
 
 implementations.lwjgl = "org.lwjgl:lwjgl"
 implementations.lwjgl_assimp = "org.lwjgl:lwjgl-assimp"
