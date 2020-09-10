@@ -6,7 +6,7 @@ group 'com.github.jsappz.lamegame.client'
 
 dependencies {
     // https://mvnrepository.com/artifact/commons-io/commons-io
-    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'commons-io', name: 'commons-io', version: '2.8.0'
     implementation libraries.joml
     implementation platform(libraries.lwjgl_bom)
     implementation implementations.lwjgl
