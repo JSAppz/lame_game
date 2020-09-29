@@ -4,7 +4,7 @@ ext {
     implementations = [:]
 }
 
-versions.flyway = '6.3.3'
+versions.flyway = '7.0.0'
 versions.gauva = '23.0'
 versions.h2 = '1.4.200'
 versions.hamcrest = '2.0.0.0'
