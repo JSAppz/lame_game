@@ -14,7 +14,7 @@ versions.junit = '4.13'
 versions.logback = '1.2.3'
 versions.lwjgl = '3.2.3'
 versions.lwjgl_natives = 'natives-windows'
-versions.mysql = '8.0.19'
+versions.mysql = '8.0.26'
 versions.mockito = '3.3.3'
 
 implementations.lwjgl = "org.lwjgl:lwjgl"
